@@ -3,9 +3,110 @@
 @import 'reset';
 @import 'global';
 
+.header {
+    padding: 60px 0;
+		// .header__inner
+		&__inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+		}
+		// .header__navigation
+		&__navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+		}
+}
+
+.menu {
+    margin-right: 63px ;
+
+		&__list {
+            display: flex;
+            font-size: 18px;
+            line-height: 21px;
+		}
+
+		&__item + .menu__item{
+            padding-left: 45px;
+
+		}
+
+		&__link {
+            outline: 2px solid transparent;
+            border-radius: 5px;
+            transition: color 0.6s, outline 0.6s, text-shadow 0.6s;
+            &:hover{
+                color: $active;
+            }
+
+            &:focus{
+                outline: 2px solid rgba(255, 104, 56, 0.7);
+            }
+
+            &:active{
+                text-shadow: rgba(49,53, 43, 0.5) 2px 2px 5px;
+            }
+		}
+
+        &__link--active {
+            color: $active;
+        }        
+}
+
+.user-nav {
+
+		&__list {
+            display: flex;
+		}
+
+		&__item:not(:last-child) {
+            margin-right: 9px;
+		}
+
+		&__link {
+            display: block;
+            width: 44px;
+            height: 44px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 19px 19px;
+            outline: 1px solid olive;
+            position: relative;
+
+            &.search-icon {
+                background-image: url('../images/icons/search.svg');
+            }
+
+            &.cart-icon {
+                background-image: url('../images/icons/cart.svg');
+            }
+
+            &:hover{
+                background-color: $active;
+            }
+		}
+
+		&__number {
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color:$active;
+            top: 8px;
+            right: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            font-size: 10px;
+            line-height: 12px;
+            color: #fff;
+		}
+}
 
 
-
+    
 
 
 
