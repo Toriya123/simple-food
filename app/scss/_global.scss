@@ -30,10 +30,12 @@ body {
     }
 }
 
-// .button {
-//     background-color:$active;
-//     border-radius: 6px;
-//     padding: 12px 32px;
-//     color: #fff;
-// }
+.primary-button {
+    background-color:$active;
+    font-size: 18px;
+    border-radius: 6px;
+    padding: 12px 32px;
+    color: #fff;
+    margin-right:34px ;
+}
 
