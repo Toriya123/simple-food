@@ -21,7 +21,7 @@ body {
        opacity: 0.8;
     }
 
-     &:focus{
+    &:focus{
        outline: 2px solid rgba(255, 104, 56, 0.7);
     }
 
@@ -30,10 +30,10 @@ body {
     }
 }
 
-.button {
-    background-color:$active;
-    border-radius: 6px;
-    padding: 12px 32px;
-    color: #fff;
-}
+// .button {
+//     background-color:$active;
+//     border-radius: 6px;
+//     padding: 12px 32px;
+//     color: #fff;
+// }
 
