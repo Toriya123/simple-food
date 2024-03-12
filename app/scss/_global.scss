@@ -9,7 +9,12 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
+    paddsectioning: 0 15px;
+}
+
+.section {
+    padding: 120px 0;
+     text-align: center;
 }
 
 .logo {
@@ -68,5 +73,61 @@ body {
         color: $active;
     }
 }
+
+
+.title {
+    @extend %Rubik-500;
+    font-size: 36px;
+}
+
+.product {
+		// .product__item
+
+		&__item {
+                  display: inline-block;
+                  max-width: 210px;
+                  width: 100%;
+                  background-color: #fff;
+                  outline: 1px solid $additional;
+                  border-radius: 5px;
+                  padding: 20px 15px;
+                  font-size: 15px;
+                  transition: outline 0.6s;
+		}
+
+        &__item:hover {
+            outline: 1px solid $active;
+        }
+
+		// .product__img
+
+		&__img {
+                  display: inline-block;
+                  object-fit: cover;
+                  margin-bottom: 10px;
+		}
+
+		// .product__name
+
+		&__name {
+                  margin-bottom: 10px;
+		}
+		// .product__price
+
+		&__price {
+                  @extend%Rubik-500;
+                  margin-bottom: 10px;
+		}
+        
+}
+
+.product-button {
+      margin: 0 auto;
+      font-size: 14px;
+}
+
+
+
+
 
 
