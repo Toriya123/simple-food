@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Доставка еды - СимплФуд</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+  <link rel="manifest" href="favicons/site.webmanifest">
+  <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -60,8 +67,6 @@
 </header>
 
 
-
-
 <main class="main">
   <section class="hero-section">
     <div class="container">
@@ -75,7 +80,7 @@
             Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш счёт
           </p>
           <button class="primary-button" type="submit">Заказать</button>
-          <a class="menu__link hero-section__link " href="#">Подробнее</a>         
+          <a class="menu__link hero-section__link" href="#">Подробнее</a>         
         </div>
         <img class="hero-section__img" src="./images/scooter-guy.png" alt="Изображение парня на скутере">
       </div>
@@ -88,7 +93,7 @@
 
       <ul class="category__filter">
         <li class="category__box">
-          <button class="category__btn" type="button">
+          <button class="category__btn" data-filter=".category-burger" type="button">
             <svg class="icon icon-filter">
               <use href="./images/icons/symbol-defs.svg#burger"></use>
             </svg>
@@ -97,7 +102,7 @@
         </li>   
         
         <li class="category__box">
-          <button class="category__btn" type="button">
+          <button class="category__btn" data-filter=".category-pizza"  type="button">
             <svg class="icon icon-filter">
               <use href="./images/icons/symbol-defs.svg#pizza"></use>
             </svg>
@@ -106,7 +111,7 @@
         </li>
 
         <li class="category__box">
-          <button class="category__btn" type="button">
+          <button class="category__btn" data-filter=".category-sandwich" type="button">
             <svg class="icon icon-filter">
               <use href="./images/icons/symbol-defs.svg#sandwich"></use>
             </svg>
@@ -115,7 +120,7 @@
         </li>
 
         <li class="category__box">
-          <button class="category__btn" type="button">
+          <button class="category__btn" data-filter=".category-asia"  type="button">
             <svg class="icon icon-filter">
               <use href="./images/icons/symbol-defs.svg#asia"></use>
             </svg>
@@ -124,7 +129,7 @@
         </li>
 
         <li class="category__box">
-          <button class="category__btn" type="button">
+          <button class="category__btn" data-filter=".category-sets" type="button">
             <svg class="icon icon-filter">
               <use href="./images/icons/symbol-defs.svg#sets"></use>
             </svg>
@@ -136,74 +141,74 @@
 
       <ul class="product__inner">
        
-        <li class="product__item">
+        <li class="product__item mix category-burger ">
           <img class="product__img" src="images/products/cheeseburger.png" alt="картинка чизбургера с листьями салата">
           <p class="product__name">Чизбургер с листьями салата</p>
           <div class="product__price">160 грн.</div>
-          <button class="primary-button product-button " type="submit">Заказать</button>
+          <button class="primary-button product-button " type="button">Заказать</button>
         </li>
 
-        <li class="product__item">
+        <li class="product__item mix category-pizza ">
           <img class="product__img" src="images/products/beefburger.png" alt="картинка бифбургера">
           <p class="product__name">Чизбургер с листьями салата</p>
           <div class="product__price">190 грн. грн.</div>
-          <button class="primary-button product-button " type="submit">Заказать</button>
+          <button class="primary-button product-button " type="button">Заказать</button>
         </li>
 
-        <li class="product__item">
+        <li class="product__item mix category-asia">
           <img class="product__img" src="images/products/royalcheeseburger.png" alt="картинка королевского чизбургера">
           <p class="product__name">Чизбургер с листьями салата</p>
           <div class="product__price">260 грн.</div>
-          <button class="primary-button product-button " type="submit">Заказать</button>
+          <button class="primary-button product-button " type="button">Заказать</button>
         </li>
 
-        <li class="product__item">
+        <li class="product__item mix category-asia">
           <img class="product__img" src="images/products/black-hamburger.png" alt="картинка черного гамбургера">
           <p class="product__name">Чизбургер с листьями салата</p>
           <div class="product__price">199 грн.</div>
-          <button class="primary-button product-button " type="submit">Заказать</button>
+          <button class="primary-button product-button " type="button">Заказать</button>
         </li>
 
-        <li class="product__item">
+        <li class="product__item mix category-sets">
           <img class="product__img" src="images/products/chicken-burger.png" alt="картинка чикен бургера">
           <p class="product__name">Чизбургер с листьями салата</p>
           <div class="product__price">180 грн.</div>
-          <button class="primary-button product-button " type="submit">Заказать</button>
+          <button class="primary-button product-button " type="button">Заказать</button>
         </li>
 
-        <li class="product__item">
+        <li class="product__item mix category-sandwich">
           <img class="product__img" src="images/products/cheeseburger.png" alt="картинка чизбургера с листьями салата">
           <p class="product__name">Чизбургер с листьями салата</p>
           <div class="product__price">160 грн.</div>
-          <button class="primary-button product-button " type="submit">Заказать</button>
+          <button class="primary-button product-button " type="button">Заказать</button>
         </li>
 
-        <li class="product__item">
+        <li class="product__item mix category-pizza">
           <img class="product__img" src="images/products/cheeseburger.png" alt="картинка чизбургера с листьями салата">
           <p class="product__name">Чизбургер с листьями салата</p>
           <div class="product__price">190 грн.</div>
-          <button class="primary-button product-button " type="submit">Заказать</button>
+          <button class="primary-button product-button " type="button">Заказать</button>
         </li>
 
-        <li class="product__item">
+        <li class="product__item mix mix category-pizza">
           <img class="product__img" src="images/products/cheeseburger.png" alt="картинка чизбургера с листьями салата">
           <p class="product__name">Чизбургер с листьями салата</p>
           <div class="product__price">260 грн.</div>
-          <button class="primary-button product-button " type="submit">Заказать</button>
+          <button class="primary-button product-button " type="button">Заказать</button>
         </li>
 
-        <li class="product__item">
+        <li class="product__item mix category-asia">
           <img class="product__img" src="images/products/cheeseburger.png" alt="картинка чизбургера с листьями салата">
           <p class="product__name">Чизбургер с листьями салата</p>
           <div class="product__price">160 грн.</div>
-          <button class="primary-button product-button " type="submit">Заказать</button>
+          <button class="primary-button product-button " type="button">Заказать</button>
         </li>
 
-        <li class="product__item">
+        <li class="product__item mix category-sets">
           <img class="product__img" src="images/products/cheeseburger.png" alt="картинка чизбургера с листьями салата">
           <p class="product__name">Чизбургер с листьями салата</p>
           <div class="product__price">160 грн.</div>
-          <button class="primary-button product-button " type="submit">Заказать</button>
+          <button class="primary-button product-button " type="button">Заказать</button>
         </li>
       </ul>
 
@@ -211,12 +216,6 @@
     </div>
   </section>
 </main>
-
-
-
-
-
-
 
 
 <footer class="footer">
@@ -353,7 +352,7 @@
     </div>
 </footer>
   
-  
+  <script src="js/mixitup.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
 </html>

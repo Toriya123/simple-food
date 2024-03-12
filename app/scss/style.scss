@@ -5,7 +5,6 @@
 
 .header {
       padding: 60px 0;
-		// .header__navigation
 
             &__inner {
                   display: flex;
@@ -19,25 +18,19 @@
 }
 .menu {
 margin-right: 50px;
-		// .menu__list
 
 		&__list {
                   display: flex;
 		}
 
-		// .menu__item
-
 		&__item {
                   font-size: 18px;
                   line-height: 1.4;
-
 		}
+
             &__item:not(:last-child) {
                   margin-right: 45px;
             }
-           
-
-		// .menu__link
 
 		&__link {
                   outline: 2px solid transparent;
@@ -60,12 +53,10 @@ margin-right: 50px;
             }
 }
 .user-nav {
-		// .user-nav__list
 
 		&__list {
                   display: flex;
 		}
-		// .user-nav__item
 
 		&__item {
                   
@@ -73,7 +64,7 @@ margin-right: 50px;
             &__item:not(:last-child) {
                   margin-right: 10px;
             }
-		// .user-nav__link
+
 
 		&__link {
                  
@@ -89,7 +80,7 @@ margin-right: 50px;
                  border-radius: 5px;
                  transition: background-color 0.6s, color 0.6s, outline 0.6s ease-in-out ;
 		}
-            // .user-nav__number
+
 
             &__number {
                   position: absolute;
@@ -104,7 +95,7 @@ margin-right: 50px;
                   align-items: center;
                   font-size: 10px;
                   line-height: 1.2;
-                  color: #fff;
+                  color: $auxiliary;
                   transition: background-color 0.6s, color 0.6s;
             }
             .user-nav__link:hover {
@@ -113,7 +104,7 @@ margin-right: 50px;
                  
             } 
             .user-nav__link:hover .user-nav__number {
-                  background-color: #fff;
+                  background-color: $auxiliary;
                   color: $active;                
             } 
 
@@ -125,7 +116,7 @@ margin-right: 50px;
 
             .user-nav__link:focus .user-nav__number {
                   background-color: $active;
-                  color: #fff;                              
+                  color: $auxiliary;                              
             } 
 
             .user-nav__link:active {
@@ -134,22 +125,16 @@ margin-right: 50px;
 
             .user-nav__link:active .user-nav__number {
                   background-color: $active;
-                  color: #fff;                              
+                  color: $auxiliary;                              
             } 
 }
 
 .hero-section {
-      min-height: 100vh;
-
-		// .hero-section__inner
 
 		&__inner {
                   display: flex;
                   justify-content: space-between;
-                  
 		}
-
-		// .hero-section__content
 
 		&__content {
                   max-width: 450px;
@@ -157,8 +142,6 @@ margin-right: 50px;
                   margin-right: 162px;
                   padding: 155px 0;
 		}
-
-		// .hero-section__title
 
 		&__title {
             @extend %Rubik-500;
@@ -172,43 +155,35 @@ margin-right: 50px;
                   color: $active;
             }
 
-		// .hero-section__text
-
 		&__text {
                   line-height: 1.5;
                   margin-bottom:20px;
 		}
 
-		// .hero-section__link
-
 		&__link {
                   text-decoration: underline;
 		}
 
-		// .hero-section__img
-
 }
 
 .category {
-		// .category__filter
 
 		&__filter {
                   display: flex;
                   justify-content: flex-start;
                   margin-bottom: 45px;
 		}
-		// .category__box
+
 
 		&__box {
                   margin-right: 20px;
-
 		}
-		// .category__btn
+
 
 		&__btn {
                   padding: 22px 32px;
-                  background-color: #fff;
-                  color: #fff;
+                  background-color: $auxiliary;
+                  color: $auxiliary;
                   display: flex;
                   align-items: center;
                   color: $title;
@@ -217,6 +192,11 @@ margin-right: 50px;
                   transition:outline 0.6s, background-color 0.6s, color 0.6s  ;
 		}
 
+            &__btn.mixitup-control-active {
+                  color: $auxiliary;
+                  background-color: $active;
+            }
+
             &__btn:hover {
                   outline: 2px solid rgba(255, 104, 56, 0.7);
                   background-color:rgba(255, 122, 80, 0.1);
@@ -224,23 +204,26 @@ margin-right: 50px;
             }
 
             &__btn:focus {
-                  background-color:#fff;
+                  background-color:$auxiliary;
                   color: $title;
             }
 
              &__btn:active {
                   box-shadow: inset 0 -5px 12px 0 rgba(255, 104, 56, 0.2);
             }
-
             
 }
 
-.title {
-      		// .title__category
+  .category__btn.mixitup-control-active {
+      color: $auxiliary;
+      background-color: $active;
+}
 
-		&__category {
-                  margin-bottom: 60px;
-		}
+.title {
+
+	&__category {
+             margin-bottom: 60px;
+	}
 }
 
 .icon-filter {
@@ -260,38 +243,21 @@ margin-right: 50px;
 
 
 
-
-
-
-
-
-
-
-
-
-
-            
 .footer {
-		// .footer__top
 
-		&__top {
-                  display: flex;
-                  justify-content: space-between;
-                  padding-right: 64px;
-                  margin-bottom: 70px;
-		}
+	&__top {
+            display: flex;
+            justify-content: space-between;
+            padding-right: 64px;
+            margin-bottom: 70px;
+	}
 }
 .footer-top {
-
-		// .footer-top__item
 
             &__item-form {
                   max-width: 200px;
                   width: 100%;
-
             }
-
-		// .footer-top__form
 
 		&__form {
                   margin-top: 30px;
@@ -303,14 +269,12 @@ margin-right: 50px;
                   font-size: 14px;
             }
 
-		// .footer-top__form-input
-
 		&__form-input {
                  outline: 1px solid $accent;
                  display: block;
                  max-width: 200px;
                  width: 100%; 
-                 background-color: #fff;
+                 background-color: $auxiliary;
                  border-radius: 5px;
                  padding: 13px 15px; 
                  transition: outline 0.3s;              
@@ -334,8 +298,6 @@ margin-right: 50px;
                  color: $accent;
             }
 
-		// .footer-top__list
-
 		&__list {
                   display: grid;                
                   grid-template-columns: repeat(3, 1fr);
@@ -346,8 +308,6 @@ margin-right: 50px;
             &__list-item {
                   margin-bottom: 20px;
             }
-
-		// .footer-top__link
 
 		&__link {
 		}
@@ -372,28 +332,15 @@ margin-right: 50px;
 
 
 .contact {
-		// .contact__info
 
-		&__info {
-		}
+	&__item {
+            font-size: 16px;
+            margin-bottom: 15px;
+	}
 
-		// .contact__list
-
-		&__list {
-		}
-
-		// .contact__item
-
-		&__item {
-                   font-size: 16px;
-                   margin-bottom: 15px;
-		}
-
-		// .contact__link
-
-		&__link {
+	&__link {
                   display: flex;
-		}
+	}
 }
 
 .icon-contact {
@@ -406,49 +353,43 @@ margin-right: 50px;
 
 .social {
 
-		// .social__list
+	&__list {
+            display: flex;
+	}
 
-		&__list {
-                  display: flex;
-		}
+	&__item {
+            margin-right: 13px;
+	}
 
-		// .social__item
+	&__link {
+            width: 39px;
+            height: 39px;
+            background-color: $additional;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $default;
+            outline: 2px solid transparent;
+            transition: background-color 0.6s, color 0.6s, outline 0.6s;
+	}
 
-		&__item {
-                  margin-right: 13px;
-		}
+      &__link:hover {
+            background-color: $active;
+            color: rgb(255, 255, 255);
+      }
 
-		// .social__link
+      &__link:focus {
+            background-color: rgba(255, 122, 80, 0.1);
+            color: black;
+            outline: 2px solid rgba(255, 104, 56, 0.7);
+      }
 
-		&__link {
-                  width: 39px;
-                  height: 39px;
-                  background-color: $additional;
-                  border-radius: 50%;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  color: $default;
-                  outline: 2px solid transparent;
-                  transition: background-color 0.6s, color 0.6s, outline 0.6s;
-		}
-
-            &__link:hover {
-                  background-color: $active;
-                  color: rgb(255, 255, 255);
-            }
-
-            &__link:focus {
-                  background-color: rgba(255, 122, 80, 0.1);
-                  color: black;
-                  outline: 2px solid rgba(255, 104, 56, 0.7);
-            }
-
-             &__link:active {
-                  background-color: #FFF2ED;;
-                  color: black;
-                  color: $active;
-            }
+      &__link:active {
+            background-color: #FFF2ED;;
+            color: black;
+            color: $active;
+      }
 }
 
 .icon-social {

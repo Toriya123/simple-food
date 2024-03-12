@@ -9,6 +9,7 @@ const clean        = require('gulp-clean');
 const browserSync  = require('browser-sync').create();
 
 
+
 function browsersync() {
   browserSync.init({
     server: {
@@ -39,7 +40,6 @@ function scripts() {
   .pipe(uglify())
   .pipe(dest('app/js'))
   .pipe(browserSync.stream())
-  
 }
 
 function images() {
@@ -81,6 +81,8 @@ function watching() {
 
 
 }
+
+
 
 
 exports.styles  = styles;
