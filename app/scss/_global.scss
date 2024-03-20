@@ -1,5 +1,6 @@
 body {
-    @extend %Rubik-400;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
     font-size: 20px;
     line-height: 1.3;
     color:$default;
@@ -10,12 +11,25 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    paddsectioning: 0 15px;
+    padding: 0 15px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .section {
-    padding: 120px 0;
-     text-align: center;
+    padding-bottom: 120px;
+    text-align: center;
 }
 
 .logo {
@@ -36,20 +50,39 @@ body {
     }
 }
 
+.primary__link {
+
+    outline: 2px solid transparent;
+    border-radius: 5px;
+    transition: color 0.6s, outline 0.6s, text-shadow 0.6s;
+    &:hover {
+    color:$active;
+    }
+
+    &:focus {
+     outline: 2px solid rgba(255, 104, 56, 0.7);
+    }
+
+    &:active {
+    text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+    }
+
+     &.current {
+    color:$active ;
+    }
+}
+
 .icon {
     stroke: currentColor;
-    width: 19px;
-    height:19px;
     fill: none;
 }
 
-.primary-button {
+.button {
     background-color:$active;
-    font-size: 18px;
+    font-size: 14px;
     border-radius: 6px;
-    padding: 12px 32px;
+    padding: 7px 16px;
     color: $auxiliary;
-    margin-right:34px;
     outline: 2px solid transparent;
     transition: outline 0.6s, box-shadow 0.6s, background-color 0.6s, color 0.6s;
 
@@ -73,6 +106,11 @@ body {
         background-color: rgba(255, 122, 80, 0.1);
         color: $active;
     }
+
+    &__big {
+        padding: 12px 32px;
+        font-size: 18px;
+    }
 }
 
 .title {
@@ -81,44 +119,40 @@ body {
 }
 
 .product {
+    &__card {
+        text-align: center;
+        display: inline-block;
+        max-width: 210px;
+        width: 100%;
+        background-color: $auxiliary;
+        outline: 1px solid $additional;
+        border-radius: 5px;
+        padding: 20px 15px;
+        font-size: 15px;
+        transition: outline 0.6s;
 
-		&__item {
-                  display: inline-block;
-                  max-width: 210px;
-                  width: 100%;
-                  background-color: $auxiliary;
-                  outline: 1px solid $additional;
-                  border-radius: 5px;
-                  padding: 20px 15px;
-                  font-size: 15px;
-                  transition: outline 0.6s;
-		}
-
-        &__item:hover {
-            outline: 1px solid $active;
+        &:hover {
+        outline: 1px solid $active;
         }
+    }
 
-		&__img {
-                  display: inline-block;
-                  object-fit: cover;
-                  margin-bottom: 10px;
-		}
+    &__img {
+        display: inline-block;
+        object-fit: cover;
+        margin-bottom: 10px;
+    }
 
-		&__name {
-                  margin-bottom: 10px;
-		}
+    &__name {
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
 
-		&__price {
-                  @extend%Rubik-500;
-                  margin-bottom: 10px;
-		}
-        
+    &__price {
+        @extend%Rubik-500;
+        margin-bottom: 10px;
+    }
 }
 
-.product-button {
-      margin: 0 auto;
-      font-size: 14px;
-}
 
 
 
